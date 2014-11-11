@@ -1,0 +1,23 @@
+AddDefaultCharset UTF-8
+Options -Indexes
+RewriteEngine on
+
+RewriteRule ^search$ search.php
+RewriteRule ^out$ out.php
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !(out|search).php
+RewriteCond $1 !^(favicon\.ico)
+RewriteRule ^(.*)$ /index.php/$1 [L]
+
+# otherwise forward it to index.php
+# RewriteRule . index.php
+
+#AuthType Basic
+#AuthName "i-kiddy protected area"
+#AuthUserFile /home/ten/www/i-kiddy.com/webdocs/.htpasswd
+#Require valid-user

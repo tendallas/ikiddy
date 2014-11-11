@@ -1,0 +1,7 @@
+.autocomplete-loading{
+	background: url("ui-anim_basic_16x16.gif") no-repeat scroll right center white;
+}
+
+body {
+	color: #484848;
+}

@@ -1,0 +1,700 @@
+2013/12/01 05:06:58 [trace] [system.CModule] Loading "log" application component
+2013/12/01 05:06:58 [trace] [system.CModule] Loading "db" application component
+2013/12/01 05:06:58 [trace] [system.db.CDbConnection] Opening DB connection
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `SystemModules`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `SystemModules`
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] SystemModules.findAll()
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT name FROM `SystemModules` `t` WHERE enabled=1
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] SystemModules.findAll()
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT name FROM `SystemModules` `t`
+2013/12/01 05:06:58 [trace] [system.CModule] Loading "messages" application component
+2013/12/01 05:06:58 [trace] [system.CModule] Loading "user" application component
+2013/12/01 05:06:58 [trace] [system.CModule] Loading "session" application component
+2013/12/01 05:06:58 [trace] [system.CModule] Loading "request" application component
+2013/12/01 05:06:58 [trace] [system.CModule] Loading "securityManager" application component
+2013/12/01 05:06:58 [trace] [system.CModule] Loading "urlManager" application component
+2013/12/01 05:06:58 [trace] [system.CModule] Loading "cache" application component
+2013/12/01 05:06:58 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+2013/12/01 05:06:58 [trace] [system.CModule] Loading "languageManager" application component
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `SystemLanguage`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `SystemLanguage`
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] SSystemLanguage.findAll()
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `SystemLanguage` `t`
+2013/12/01 05:06:58 [trace] [application] Activating language Русский
+2013/12/01 05:06:58 [trace] [system.base.CModule] Loading "store" module
+2013/12/01 05:06:58 [trace] [system.CModule] Loading "settings" application component
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT *
+FROM `SystemSettings`
+ORDER BY `category`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `StoreCategory`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `StoreCategory`
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] StoreCategory.find()
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `StoreCategoryTranslate`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `StoreCategoryTranslate`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((t.id != 1) AND (t.url=:url)) AND (cat_translate.language_id=:language_id). Bound with :url='tovari', :language_id='1'
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `StoreProduct`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `StoreProduct`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `Discount`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `Discount`
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] Discount.findAll()
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `Discount` `t` WHERE (t.active=1) AND (start_date <= :now AND end_date >= :now). Bound with :now='2013-12-01 05:06:58'
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT type_id FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) WHERE (categorization.category=:ycp0) AND (`t`.is_active=1) GROUP BY type_id. Bound with :ycp0='260'
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `StoreAttribute`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `StoreAttribute`
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] StoreAttribute.findAll()
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `StoreTypeAttribute`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `StoreTypeAttribute`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `StoreAttributeOption`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `StoreAttributeOption`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `StoreAttributeOptionTranslate`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `StoreAttributeOptionTranslate`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `StoreAttributeTranslate`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `StoreAttributeTranslate`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `StoreAttribute`.`id` AS `t0_c0`, `StoreAttribute`.`name` AS `t0_c1`, `StoreAttribute`.`type` AS `t0_c2`, `StoreAttribute`.`display_on_front` AS `t0_c3`, `StoreAttribute`.`use_in_filter` AS `t0_c4`, `StoreAttribute`.`use_in_variants` AS `t0_c5`, `StoreAttribute`.`use_in_compare` AS `t0_c6`, `StoreAttribute`.`select_many` AS `t0_c7`, `StoreAttribute`.`position` AS `t0_c8`, `StoreAttribute`.`required` AS `t0_c9`, `types`.`type_id` AS `t1_c0`, `types`.`attribute_id` AS `t1_c1`, `options`.`id` AS `t2_c0`, `options`.`attribute_id` AS `t2_c1`, `options`.`position` AS `t2_c2`, `option_translate`.`id` AS `t3_c0`, `option_translate`.`language_id` AS `t3_c1`, `option_translate`.`object_id` AS `t3_c2`, `option_translate`.`value` AS `t3_c3`, `attr_translate`.`id` AS `t4_c0`, `attr_translate`.`object_id` AS `t4_c1`, `attr_translate`.`language_id` AS `t4_c2`, `attr_translate`.`title` AS `t4_c3` FROM `StoreAttribute` `StoreAttribute`  LEFT OUTER JOIN `StoreTypeAttribute` `types` ON (`types`.`attribute_id`=`StoreAttribute`.`id`)  LEFT OUTER JOIN `StoreAttributeOption` `options` ON (`options`.`attribute_id`=`StoreAttribute`.`id`)  LEFT OUTER JOIN `StoreAttributeOptionTranslate` `option_translate` ON (`option_translate`.`object_id`=`options`.`id`)  LEFT OUTER JOIN `StoreAttributeTranslate` `attr_translate` ON (`attr_translate`.`object_id`=`StoreAttribute`.`id`)  WHERE ((StoreAttribute.use_in_filter=1) AND (types.type_id IN (:ycp1, :ycp2, :ycp3, :ycp4, :ycp5, :ycp6, :ycp7, :ycp8, :ycp9, :ycp10, :ycp11, :ycp12))) AND (option_translate.language_id=:language_id) AND (attr_translate.language_id=:language_id) ORDER BY StoreAttribute.position ASC, options.position ASC. Bound with :ycp1='11', :ycp2='12', :ycp3='13', :ycp4='14', :ycp5='15', :ycp6='17', :ycp7='18', :ycp8='19', :ycp9='20', :ycp10='22', :ycp11='23', :ycp12='24', :language_id='1'
+2013/12/01 05:06:58 [trace] [system.CModule] Loading "currency" application component
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `StoreCurrency`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `StoreCurrency`
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] StoreCurrency.findAll()
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreCurrency` `t`
+2013/12/01 05:06:58 [trace] [system.CModule] Loading "themeManager" application component
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `StoreManufacturer`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `StoreManufacturer`
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] StoreManufacturer.findAllByPk()
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `StoreManufacturerTranslate`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `StoreManufacturerTranslate`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`url` AS `t0_c1`, `t`.`layout` AS `t0_c2`, `t`.`view` AS `t0_c3`, `man_translate`.`id` AS `t1_c0`, `man_translate`.`object_id` AS `t1_c1`, `man_translate`.`language_id` AS `t1_c2`, `man_translate`.`name` AS `t1_c3`, `man_translate`.`description` AS `t1_c4`, `man_translate`.`meta_title` AS `t1_c5`, `man_translate`.`meta_keywords` AS `t1_c6`, `man_translate`.`meta_description` AS `t1_c7` FROM `StoreManufacturer` `t`  LEFT OUTER JOIN `StoreManufacturerTranslate` `man_translate` ON (`man_translate`.`object_id`=`t`.`id`)  WHERE (`t`.`id` IN (23, 20, 27, 29)) AND (man_translate.language_id=:language_id). Bound with :language_id='1'
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((t.id != 1) AND (`t`.`lft`<48 AND `t`.`rgt`>49)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:58 [trace] [system.CModule] Loading "widgetFactory" application component
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] StoreProduct.findAll()
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `StoreProductTranslate`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `StoreProductTranslate`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`manufacturer_id` AS `t0_c1`, `t`.`id` AS `t0_c0`, `manufacturer`.`id` AS `t1_c0`, `manufacturer`.`url` AS `t1_c1`, `manufacturer`.`layout` AS `t1_c2`, `manufacturer`.`view` AS `t1_c3`, `translate`.`id` AS `t2_c0`, `translate`.`object_id` AS `t2_c1`, `translate`.`language_id` AS `t2_c2`, `translate`.`name` AS `t2_c3`, `translate`.`short_description` AS `t2_c4`, `translate`.`full_description` AS `t2_c5`, `translate`.`meta_title` AS `t2_c6`, `translate`.`meta_keywords` AS `t2_c7`, `translate`.`meta_description` AS `t2_c8` FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) LEFT OUTER JOIN `StoreManufacturer` `manufacturer` ON (`t`.`manufacturer_id`=`manufacturer`.`id`)  LEFT OUTER JOIN `StoreProductTranslate` `translate` ON (`translate`.`object_id`=`t`.`id`)  WHERE (((`t`.is_active=1) AND (categorization.category=:ycp18)) AND (t.manufacturer_id IS NOT NULL)) AND (translate.language_id=:language_id) GROUP BY t.manufacturer_id. Bound with :ycp18='260', :language_id='1'
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `manufacturer_id` AS `c`, count(t.id) AS `s` FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp19)) AND (`t`.`manufacturer_id` IN (19, 20, 23, 25, 26, 27, 28, 29, 30)) GROUP BY `manufacturer_id`, t.id. Bound with :ycp19='260'
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `StoreProductAttributeEAV`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `StoreProductAttributeEAV`
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 99
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 131
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 107
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 100
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 112
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 84
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 162
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 163
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 169
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] lazy loading StoreManufacturer.man_translate
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `man_translate`.`id` AS `t1_c0`, `man_translate`.`object_id` AS `t1_c1`, `man_translate`.`language_id` AS `t1_c2`, `man_translate`.`name` AS `t1_c3`, `man_translate`.`description` AS `t1_c4`, `man_translate`.`meta_title` AS `t1_c5`, `man_translate`.`meta_keywords` AS `t1_c6`, `man_translate`.`meta_description` AS `t1_c7` FROM `StoreManufacturerTranslate` `man_translate`  WHERE (`man_translate`.`object_id`=:ypl0). Bound with :ypl0='19'
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] lazy loading StoreManufacturer.man_translate
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `man_translate`.`id` AS `t1_c0`, `man_translate`.`object_id` AS `t1_c1`, `man_translate`.`language_id` AS `t1_c2`, `man_translate`.`name` AS `t1_c3`, `man_translate`.`description` AS `t1_c4`, `man_translate`.`meta_title` AS `t1_c5`, `man_translate`.`meta_keywords` AS `t1_c6`, `man_translate`.`meta_description` AS `t1_c7` FROM `StoreManufacturerTranslate` `man_translate`  WHERE (`man_translate`.`object_id`=:ypl0). Bound with :ypl0='20'
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] lazy loading StoreManufacturer.man_translate
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `man_translate`.`id` AS `t1_c0`, `man_translate`.`object_id` AS `t1_c1`, `man_translate`.`language_id` AS `t1_c2`, `man_translate`.`name` AS `t1_c3`, `man_translate`.`description` AS `t1_c4`, `man_translate`.`meta_title` AS `t1_c5`, `man_translate`.`meta_keywords` AS `t1_c6`, `man_translate`.`meta_description` AS `t1_c7` FROM `StoreManufacturerTranslate` `man_translate`  WHERE (`man_translate`.`object_id`=:ypl0). Bound with :ypl0='23'
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] lazy loading StoreManufacturer.man_translate
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `man_translate`.`id` AS `t1_c0`, `man_translate`.`object_id` AS `t1_c1`, `man_translate`.`language_id` AS `t1_c2`, `man_translate`.`name` AS `t1_c3`, `man_translate`.`description` AS `t1_c4`, `man_translate`.`meta_title` AS `t1_c5`, `man_translate`.`meta_keywords` AS `t1_c6`, `man_translate`.`meta_description` AS `t1_c7` FROM `StoreManufacturerTranslate` `man_translate`  WHERE (`man_translate`.`object_id`=:ypl0). Bound with :ypl0='25'
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] lazy loading StoreManufacturer.man_translate
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `man_translate`.`id` AS `t1_c0`, `man_translate`.`object_id` AS `t1_c1`, `man_translate`.`language_id` AS `t1_c2`, `man_translate`.`name` AS `t1_c3`, `man_translate`.`description` AS `t1_c4`, `man_translate`.`meta_title` AS `t1_c5`, `man_translate`.`meta_keywords` AS `t1_c6`, `man_translate`.`meta_description` AS `t1_c7` FROM `StoreManufacturerTranslate` `man_translate`  WHERE (`man_translate`.`object_id`=:ypl0). Bound with :ypl0='26'
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] lazy loading StoreManufacturer.man_translate
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `man_translate`.`id` AS `t1_c0`, `man_translate`.`object_id` AS `t1_c1`, `man_translate`.`language_id` AS `t1_c2`, `man_translate`.`name` AS `t1_c3`, `man_translate`.`description` AS `t1_c4`, `man_translate`.`meta_title` AS `t1_c5`, `man_translate`.`meta_keywords` AS `t1_c6`, `man_translate`.`meta_description` AS `t1_c7` FROM `StoreManufacturerTranslate` `man_translate`  WHERE (`man_translate`.`object_id`=:ypl0). Bound with :ypl0='27'
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] lazy loading StoreManufacturer.man_translate
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `man_translate`.`id` AS `t1_c0`, `man_translate`.`object_id` AS `t1_c1`, `man_translate`.`language_id` AS `t1_c2`, `man_translate`.`name` AS `t1_c3`, `man_translate`.`description` AS `t1_c4`, `man_translate`.`meta_title` AS `t1_c5`, `man_translate`.`meta_keywords` AS `t1_c6`, `man_translate`.`meta_description` AS `t1_c7` FROM `StoreManufacturerTranslate` `man_translate`  WHERE (`man_translate`.`object_id`=:ypl0). Bound with :ypl0='28'
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] lazy loading StoreManufacturer.man_translate
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `man_translate`.`id` AS `t1_c0`, `man_translate`.`object_id` AS `t1_c1`, `man_translate`.`language_id` AS `t1_c2`, `man_translate`.`name` AS `t1_c3`, `man_translate`.`description` AS `t1_c4`, `man_translate`.`meta_title` AS `t1_c5`, `man_translate`.`meta_keywords` AS `t1_c6`, `man_translate`.`meta_description` AS `t1_c7` FROM `StoreManufacturerTranslate` `man_translate`  WHERE (`man_translate`.`object_id`=:ypl0). Bound with :ypl0='29'
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] lazy loading StoreManufacturer.man_translate
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `man_translate`.`id` AS `t1_c0`, `man_translate`.`object_id` AS `t1_c1`, `man_translate`.`language_id` AS `t1_c2`, `man_translate`.`name` AS `t1_c3`, `man_translate`.`description` AS `t1_c4`, `man_translate`.`meta_title` AS `t1_c5`, `man_translate`.`meta_keywords` AS `t1_c6`, `man_translate`.`meta_description` AS `t1_c7` FROM `StoreManufacturerTranslate` `man_translate`  WHERE (`man_translate`.`object_id`=:ypl0). Bound with :ypl0='30'
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'sex'
+AND eavb1.value = '165'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '123'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'size'
+AND eavb3.value = '120' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp20)) AND (manufacturer_id IN (:ycp21, :ycp22, :ycp23, :ycp24)) GROUP BY t.id) sq. Bound with :ycp20='260', :ycp21='23', :ycp22='20', :ycp23='27', :ycp24='29'
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'sex'
+AND eavb1.value = '166'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '123'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'size'
+AND eavb3.value = '120' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp25)) AND (manufacturer_id IN (:ycp26, :ycp27, :ycp28, :ycp29)) GROUP BY t.id) sq. Bound with :ycp25='260', :ycp26='23', :ycp27='20', :ycp28='27', :ycp29='29'
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'sex'
+AND eavb1.value = '167'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '123'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'size'
+AND eavb3.value = '120' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp30)) AND (manufacturer_id IN (:ycp31, :ycp32, :ycp33, :ycp34)) GROUP BY t.id) sq. Bound with :ycp30='260', :ycp31='23', :ycp32='20', :ycp33='27', :ycp34='29'
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'size'
+AND eavb3.value = '119' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp35)) AND (manufacturer_id IN (:ycp36, :ycp37, :ycp38, :ycp39)) GROUP BY t.id) sq. Bound with :ycp35='260', :ycp36='23', :ycp37='20', :ycp38='27', :ycp39='29'
+2013/12/01 05:06:58 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'size'
+AND eavb3.value = '120' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp40)) AND (manufacturer_id IN (:ycp41, :ycp42, :ycp43, :ycp44)) GROUP BY t.id) sq. Bound with :ycp40='260', :ycp41='23', :ycp42='20', :ycp43='27', :ycp44='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'size'
+AND eavb3.value = '123' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp45)) AND (manufacturer_id IN (:ycp46, :ycp47, :ycp48, :ycp49)) GROUP BY t.id) sq. Bound with :ycp45='260', :ycp46='23', :ycp47='20', :ycp48='27', :ycp49='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'size'
+AND eavb3.value = '124' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp50)) AND (manufacturer_id IN (:ycp51, :ycp52, :ycp53, :ycp54)) GROUP BY t.id) sq. Bound with :ycp50='260', :ycp51='23', :ycp52='20', :ycp53='27', :ycp54='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'size'
+AND eavb3.value = '138' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp55)) AND (manufacturer_id IN (:ycp56, :ycp57, :ycp58, :ycp59)) GROUP BY t.id) sq. Bound with :ycp55='260', :ycp56='23', :ycp57='20', :ycp58='27', :ycp59='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'size'
+AND eavb3.value = '146' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp60)) AND (manufacturer_id IN (:ycp61, :ycp62, :ycp63, :ycp64)) GROUP BY t.id) sq. Bound with :ycp60='260', :ycp61='23', :ycp62='20', :ycp63='27', :ycp64='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'size'
+AND eavb3.value = '164' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp65)) AND (manufacturer_id IN (:ycp66, :ycp67, :ycp68, :ycp69)) GROUP BY t.id) sq. Bound with :ycp65='260', :ycp66='23', :ycp67='20', :ycp68='27', :ycp69='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'color'
+AND eavb3.value = '121' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp70)) AND (manufacturer_id IN (:ycp71, :ycp72, :ycp73, :ycp74)) GROUP BY t.id) sq. Bound with :ycp70='260', :ycp71='23', :ycp72='20', :ycp73='27', :ycp74='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'color'
+AND eavb3.value = '122' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp75)) AND (manufacturer_id IN (:ycp76, :ycp77, :ycp78, :ycp79)) GROUP BY t.id) sq. Bound with :ycp75='260', :ycp76='23', :ycp77='20', :ycp78='27', :ycp79='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'color'
+AND eavb3.value = '126' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp80)) AND (manufacturer_id IN (:ycp81, :ycp82, :ycp83, :ycp84)) GROUP BY t.id) sq. Bound with :ycp80='260', :ycp81='23', :ycp82='20', :ycp83='27', :ycp84='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'color'
+AND eavb3.value = '137' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp85)) AND (manufacturer_id IN (:ycp86, :ycp87, :ycp88, :ycp89)) GROUP BY t.id) sq. Bound with :ycp85='260', :ycp86='23', :ycp87='20', :ycp88='27', :ycp89='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'color'
+AND eavb3.value = '127' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp90)) AND (manufacturer_id IN (:ycp91, :ycp92, :ycp93, :ycp94)) GROUP BY t.id) sq. Bound with :ycp90='260', :ycp91='23', :ycp92='20', :ycp93='27', :ycp94='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'color'
+AND eavb3.value = '128' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp95)) AND (manufacturer_id IN (:ycp96, :ycp97, :ycp98, :ycp99)) GROUP BY t.id) sq. Bound with :ycp95='260', :ycp96='23', :ycp97='20', :ycp98='27', :ycp99='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'color'
+AND eavb3.value = '129' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp100)) AND (manufacturer_id IN (:ycp101, :ycp102, :ycp103, :ycp104)) GROUP BY t.id) sq. Bound with :ycp100='260', :ycp101='23', :ycp102='20', :ycp103='27', :ycp104='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'color'
+AND eavb3.value = '130' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp105)) AND (manufacturer_id IN (:ycp106, :ycp107, :ycp108, :ycp109)) GROUP BY t.id) sq. Bound with :ycp105='260', :ycp106='23', :ycp107='20', :ycp108='27', :ycp109='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'color'
+AND eavb3.value = '131' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp110)) AND (manufacturer_id IN (:ycp111, :ycp112, :ycp113, :ycp114)) GROUP BY t.id) sq. Bound with :ycp110='260', :ycp111='23', :ycp112='20', :ycp113='27', :ycp114='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'color'
+AND eavb3.value = '140' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp115)) AND (manufacturer_id IN (:ycp116, :ycp117, :ycp118, :ycp119)) GROUP BY t.id) sq. Bound with :ycp115='260', :ycp116='23', :ycp117='20', :ycp118='27', :ycp119='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'color'
+AND eavb3.value = '141' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp120)) AND (manufacturer_id IN (:ycp121, :ycp122, :ycp123, :ycp124)) GROUP BY t.id) sq. Bound with :ycp120='260', :ycp121='23', :ycp122='20', :ycp123='27', :ycp124='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120'
+JOIN StoreProductAttributeEAV eavb3
+ON t.id = eavb3.entity
+AND eavb3.attribute = 'color'
+AND eavb3.value = '142' WHERE ((`t`.is_active=1) AND (categorization.category=:ycp125)) AND (manufacturer_id IN (:ycp126, :ycp127, :ycp128, :ycp129)) GROUP BY t.id) sq. Bound with :ycp125='260', :ycp126='23', :ycp127='20', :ycp128='27', :ycp129='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreManufacturer.findAllByPk()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`url` AS `t0_c1`, `t`.`layout` AS `t0_c2`, `t`.`view` AS `t0_c3`, `man_translate`.`id` AS `t1_c0`, `man_translate`.`object_id` AS `t1_c1`, `man_translate`.`language_id` AS `t1_c2`, `man_translate`.`name` AS `t1_c3`, `man_translate`.`description` AS `t1_c4`, `man_translate`.`meta_title` AS `t1_c5`, `man_translate`.`meta_keywords` AS `t1_c6`, `man_translate`.`meta_description` AS `t1_c7` FROM `StoreManufacturer` `t`  LEFT OUTER JOIN `StoreManufacturerTranslate` `man_translate` ON (`man_translate`.`object_id`=`t`.`id`)  WHERE (`t`.`id` IN (23, 20, 27, 29)) AND (man_translate.language_id=:language_id). Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findByPk()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE (`t`.`id`='1') AND (cat_translate.language_id=:language_id). Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((`t`.`lft`>1 AND `t`.`rgt`<50) AND (`t`.`level`<=2)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((`t`.`lft`>2 AND `t`.`rgt`<3) AND (`t`.`level`<=3)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((`t`.`lft`>4 AND `t`.`rgt`<5) AND (`t`.`level`<=3)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((`t`.`lft`>6 AND `t`.`rgt`<7) AND (`t`.`level`<=3)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((`t`.`lft`>8 AND `t`.`rgt`<9) AND (`t`.`level`<=3)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((`t`.`lft`>10 AND `t`.`rgt`<11) AND (`t`.`level`<=3)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((`t`.`lft`>12 AND `t`.`rgt`<13) AND (`t`.`level`<=3)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((`t`.`lft`>14 AND `t`.`rgt`<15) AND (`t`.`level`<=3)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((`t`.`lft`>16 AND `t`.`rgt`<17) AND (`t`.`level`<=3)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((`t`.`lft`>18 AND `t`.`rgt`<19) AND (`t`.`level`<=3)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((`t`.`lft`>20 AND `t`.`rgt`<21) AND (`t`.`level`<=3)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((`t`.`lft`>22 AND `t`.`rgt`<23) AND (`t`.`level`<=3)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((`t`.`lft`>24 AND `t`.`rgt`<25) AND (`t`.`level`<=3)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((`t`.`lft`>26 AND `t`.`rgt`<27) AND (`t`.`level`<=3)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreCategory.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`lft` AS `t0_c1`, `t`.`rgt` AS `t0_c2`, `t`.`level` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`full_path` AS `t0_c5`, `t`.`layout` AS `t0_c6`, `t`.`view` AS `t0_c7`, `cat_translate`.`id` AS `t1_c0`, `cat_translate`.`object_id` AS `t1_c1`, `cat_translate`.`language_id` AS `t1_c2`, `cat_translate`.`name` AS `t1_c3`, `cat_translate`.`meta_title` AS `t1_c4`, `cat_translate`.`meta_keywords` AS `t1_c5`, `cat_translate`.`meta_description` AS `t1_c6` FROM `StoreCategory` `t`  LEFT OUTER JOIN `StoreCategoryTranslate` `cat_translate` ON (`cat_translate`.`object_id`=`t`.`id`)  WHERE ((`t`.`lft`>48 AND `t`.`rgt`<49) AND (`t`.`level`<=3)) AND (cat_translate.language_id=:language_id) ORDER BY `t`.`lft`. Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.CModule] Loading "assetManager" application component
+2013/12/01 05:06:59 [trace] [system.CModule] Loading "clientScript" application component
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `code`
+FROM `FilterColours`
+WHERE rus_name=:name. Bound with :name='Белый'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `code`
+FROM `FilterColours`
+WHERE rus_name=:name. Bound with :name='Черный'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `code`
+FROM `FilterColours`
+WHERE rus_name=:name. Bound with :name='Красный'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `code`
+FROM `FilterColours`
+WHERE rus_name=:name. Bound with :name='Голубой'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `code`
+FROM `FilterColours`
+WHERE rus_name=:name. Bound with :name='Зеленый'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `code`
+FROM `FilterColours`
+WHERE rus_name=:name. Bound with :name='Синий'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `code`
+FROM `FilterColours`
+WHERE rus_name=:name. Bound with :name='Оранжевый'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `code`
+FROM `FilterColours`
+WHERE rus_name=:name. Bound with :name='Серый'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `code`
+FROM `FilterColours`
+WHERE rus_name=:name. Bound with :name='Желтый'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `code`
+FROM `FilterColours`
+WHERE rus_name=:name. Bound with :name='Разноцветный'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `code`
+FROM `FilterColours`
+WHERE rus_name=:name. Bound with :name='Коричневый'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `code`
+FROM `FilterColours`
+WHERE rus_name=:name. Bound with :name='Розовый'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.find()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT MIN(t.price) as aggregation_price, `t`.`id` AS `t0_c0`, `translate`.`id` AS `t1_c0`, `translate`.`object_id` AS `t1_c1`, `translate`.`language_id` AS `t1_c2`, `translate`.`name` AS `t1_c3`, `translate`.`short_description` AS `t1_c4`, `translate`.`full_description` AS `t1_c5`, `translate`.`meta_title` AS `t1_c6`, `translate`.`meta_keywords` AS `t1_c7`, `translate`.`meta_description` AS `t1_c8` FROM `StoreProduct` `t` 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120' LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) LEFT OUTER JOIN `StoreProductTranslate` `translate` ON (`translate`.`object_id`=`t`.`id`)  WHERE (((`t`.is_active=1) AND (categorization.category=:ycp13)) AND (manufacturer_id IN (:ycp14, :ycp15, :ycp16, :ycp17))) AND (translate.language_id=:language_id) GROUP BY t.id ORDER BY t.price LIMIT 1. Bound with :ycp13='260', :ycp14='23', :ycp15='20', :ycp16='27', :ycp17='29', :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 95
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.find()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT MAX(t.price) as aggregation_price, `t`.`id` AS `t0_c0`, `translate`.`id` AS `t1_c0`, `translate`.`object_id` AS `t1_c1`, `translate`.`language_id` AS `t1_c2`, `translate`.`name` AS `t1_c3`, `translate`.`short_description` AS `t1_c4`, `translate`.`full_description` AS `t1_c5`, `translate`.`meta_title` AS `t1_c6`, `translate`.`meta_keywords` AS `t1_c7`, `translate`.`meta_description` AS `t1_c8` FROM `StoreProduct` `t` 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120' LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) LEFT OUTER JOIN `StoreProductTranslate` `translate` ON (`translate`.`object_id`=`t`.`id`)  WHERE (((`t`.is_active=1) AND (categorization.category=:ycp13)) AND (manufacturer_id IN (:ycp14, :ycp15, :ycp16, :ycp17))) AND (translate.language_id=:language_id) GROUP BY t.id ORDER BY t.price DESC LIMIT 1. Bound with :ycp13='260', :ycp14='23', :ycp15='20', :ycp16='27', :ycp17='29', :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 133
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.find()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT MAX(t.price) as aggregation_price, `t`.`id` AS `t0_c0`, `translate`.`id` AS `t1_c0`, `translate`.`object_id` AS `t1_c1`, `translate`.`language_id` AS `t1_c2`, `translate`.`name` AS `t1_c3`, `translate`.`short_description` AS `t1_c4`, `translate`.`full_description` AS `t1_c5`, `translate`.`meta_title` AS `t1_c6`, `translate`.`meta_keywords` AS `t1_c7`, `translate`.`meta_description` AS `t1_c8` FROM `StoreProduct` `t` 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120' LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) LEFT OUTER JOIN `StoreProductTranslate` `translate` ON (`translate`.`object_id`=`t`.`id`)  WHERE (((`t`.is_active=1) AND (categorization.category=:ycp13)) AND (manufacturer_id IN (:ycp14, :ycp15, :ycp16, :ycp17))) AND (translate.language_id=:language_id) GROUP BY t.id ORDER BY t.price DESC LIMIT 1. Bound with :ycp13='260', :ycp14='23', :ycp15='20', :ycp16='27', :ycp17='29', :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 133
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.find()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT MAX(t.price) as aggregation_price, `t`.`id` AS `t0_c0`, `translate`.`id` AS `t1_c0`, `translate`.`object_id` AS `t1_c1`, `translate`.`language_id` AS `t1_c2`, `translate`.`name` AS `t1_c3`, `translate`.`short_description` AS `t1_c4`, `translate`.`full_description` AS `t1_c5`, `translate`.`meta_title` AS `t1_c6`, `translate`.`meta_keywords` AS `t1_c7`, `translate`.`meta_description` AS `t1_c8` FROM `StoreProduct` `t` 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120' LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) LEFT OUTER JOIN `StoreProductTranslate` `translate` ON (`translate`.`object_id`=`t`.`id`)  WHERE (((`t`.is_active=1) AND (categorization.category=:ycp13)) AND (manufacturer_id IN (:ycp14, :ycp15, :ycp16, :ycp17))) AND (translate.language_id=:language_id) GROUP BY t.id ORDER BY t.price DESC LIMIT 1. Bound with :ycp13='260', :ycp14='23', :ycp15='20', :ycp16='27', :ycp17='29', :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 133
+2013/12/01 05:06:59 [trace] [system.CModule] Loading "statePersister" application component
+2013/12/01 05:06:59 [trace] [system.caching.CFileCache] Serving "Yii.CStatePersister./home/ten/www/i-kiddy.com/webdocs/protected/runtime/state.bin" from cache
+2013/12/01 05:06:59 [trace] [system.CModule] Loading "coreMessages" application component
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.count()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM (SELECT DISTINCT t.* FROM `StoreProduct` `t` 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120' LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) WHERE ((`t`.is_active=1) AND (categorization.category=:ycp13)) AND (manufacturer_id IN (:ycp14, :ycp15, :ycp16, :ycp17)) GROUP BY t.id) sq. Bound with :ycp13='260', :ycp14='23', :ycp15='20', :ycp16='27', :ycp17='29'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreProduct.findAll()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t`.`id` AS `t0_c0`, `t`.`manufacturer_id` AS `t0_c1`, `t`.`type_id` AS `t0_c2`, `t`.`use_configurations` AS `t0_c3`, `t`.`url` AS `t0_c4`, `t`.`price` AS `t0_c5`, `t`.`max_price` AS `t0_c6`, `t`.`is_offer` AS `t0_c7`, `t`.`is_active` AS `t0_c8`, `t`.`layout` AS `t0_c9`, `t`.`view` AS `t0_c10`, `t`.`sku` AS `t0_c11`, `t`.`quantity` AS `t0_c12`, `t`.`availability` AS `t0_c13`, `t`.`auto_decrease_quantity` AS `t0_c14`, `t`.`views_count` AS `t0_c15`, `t`.`created` AS `t0_c16`, `t`.`updated` AS `t0_c17`, `t`.`added_to_cart_count` AS `t0_c18`, `t`.`votes` AS `t0_c19`, `t`.`rating` AS `t0_c20`, `translate`.`id` AS `t1_c0`, `translate`.`object_id` AS `t1_c1`, `translate`.`language_id` AS `t1_c2`, `translate`.`name` AS `t1_c3`, `translate`.`short_description` AS `t1_c4`, `translate`.`full_description` AS `t1_c5`, `translate`.`meta_title` AS `t1_c6`, `translate`.`meta_keywords` AS `t1_c7`, `translate`.`meta_description` AS `t1_c8` FROM `StoreProduct` `t` 
+JOIN StoreProductAttributeEAV eavb0
+ON t.id = eavb0.entity
+AND eavb0.attribute = 'sex'
+AND eavb0.value = '166'
+JOIN StoreProductAttributeEAV eavb1
+ON t.id = eavb1.entity
+AND eavb1.attribute = 'size'
+AND eavb1.value = '123'
+JOIN StoreProductAttributeEAV eavb2
+ON t.id = eavb2.entity
+AND eavb2.attribute = 'size'
+AND eavb2.value = '120' LEFT JOIN `StoreProductCategoryRef` `categorization` ON (`categorization`.`product`=`t`.`id`) LEFT OUTER JOIN `StoreProductTranslate` `translate` ON (`translate`.`object_id`=`t`.`id`)  WHERE (((`t`.is_active=1) AND (categorization.category=:ycp13)) AND (manufacturer_id IN (:ycp14, :ycp15, :ycp16, :ycp17))) AND (translate.language_id=:language_id) GROUP BY t.id ORDER BY t.created DESC LIMIT 12. Bound with :ycp13='260', :ycp14='23', :ycp15='20', :ycp16='27', :ycp17='29', :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 133
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 95
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 87
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 73
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `StoreProductAttributeEAV` `t` WHERE entity = 66
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] lazy loading StoreProduct.mainImage
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `StoreProductImage`
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `StoreProductImage`
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `mainImage`.`id` AS `t1_c0`, `mainImage`.`product_id` AS `t1_c1`, `mainImage`.`name` AS `t1_c2`, `mainImage`.`is_main` AS `t1_c3`, `mainImage`.`uploaded_by` AS `t1_c4`, `mainImage`.`date_uploaded` AS `t1_c5` FROM `StoreProductImage` `mainImage`  WHERE (is_main=1) AND (`mainImage`.`product_id`=:ypl0) ORDER BY date_uploaded DESC. Bound with :ypl0='133'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] lazy loading StoreProduct.mainImage
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `mainImage`.`id` AS `t1_c0`, `mainImage`.`product_id` AS `t1_c1`, `mainImage`.`name` AS `t1_c2`, `mainImage`.`is_main` AS `t1_c3`, `mainImage`.`uploaded_by` AS `t1_c4`, `mainImage`.`date_uploaded` AS `t1_c5` FROM `StoreProductImage` `mainImage`  WHERE (is_main=1) AND (`mainImage`.`product_id`=:ypl0) ORDER BY date_uploaded DESC. Bound with :ypl0='95'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] lazy loading StoreProduct.mainImage
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `mainImage`.`id` AS `t1_c0`, `mainImage`.`product_id` AS `t1_c1`, `mainImage`.`name` AS `t1_c2`, `mainImage`.`is_main` AS `t1_c3`, `mainImage`.`uploaded_by` AS `t1_c4`, `mainImage`.`date_uploaded` AS `t1_c5` FROM `StoreProductImage` `mainImage`  WHERE (is_main=1) AND (`mainImage`.`product_id`=:ypl0) ORDER BY date_uploaded DESC. Bound with :ypl0='87'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] lazy loading StoreProduct.mainImage
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `mainImage`.`id` AS `t1_c0`, `mainImage`.`product_id` AS `t1_c1`, `mainImage`.`name` AS `t1_c2`, `mainImage`.`is_main` AS `t1_c3`, `mainImage`.`uploaded_by` AS `t1_c4`, `mainImage`.`date_uploaded` AS `t1_c5` FROM `StoreProductImage` `mainImage`  WHERE (is_main=1) AND (`mainImage`.`product_id`=:ypl0) ORDER BY date_uploaded DESC. Bound with :ypl0='73'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] lazy loading StoreProduct.mainImage
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `mainImage`.`id` AS `t1_c0`, `mainImage`.`product_id` AS `t1_c1`, `mainImage`.`name` AS `t1_c2`, `mainImage`.`is_main` AS `t1_c3`, `mainImage`.`uploaded_by` AS `t1_c4`, `mainImage`.`date_uploaded` AS `t1_c5` FROM `StoreProductImage` `mainImage`  WHERE (is_main=1) AND (`mainImage`.`product_id`=:ypl0) ORDER BY date_uploaded DESC. Bound with :ypl0='66'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT *
+FROM `SeoOptimise`
+WHERE uri=:uri. Bound with :uri='/category/tovari/sex/166/manufacturer/23%3B20%3B27%3B29/size/123%3B120'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT *
+FROM `SeoOptimise`
+WHERE uri=:uri. Bound with :uri='/category/tovari/sex/166/manufacturer/23%3B20%3B27%3B29/size/123%3B120'
+2013/12/01 05:06:59 [trace] [system.db.ar.CActiveRecord] StoreManufacturer.findAllByPk()
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`url` AS `t0_c1`, `t`.`layout` AS `t0_c2`, `t`.`view` AS `t0_c3`, `man_translate`.`id` AS `t1_c0`, `man_translate`.`object_id` AS `t1_c1`, `man_translate`.`language_id` AS `t1_c2`, `man_translate`.`name` AS `t1_c3`, `man_translate`.`description` AS `t1_c4`, `man_translate`.`meta_title` AS `t1_c5`, `man_translate`.`meta_keywords` AS `t1_c6`, `man_translate`.`meta_description` AS `t1_c7` FROM `StoreManufacturer` `t`  LEFT OUTER JOIN `StoreManufacturerTranslate` `man_translate` ON (`man_translate`.`object_id`=`t`.`id`)  WHERE (`t`.`id` IN (23, 20, 27, 29)) AND (man_translate.language_id=:language_id). Bound with :language_id='1'
+2013/12/01 05:06:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(id) FROM StoreWishlistProducts WHERE user_id=:user_id. Bound with :user_id=NULL
+2013/12/01 05:06:59 [trace] [system.CModule] Loading "cart" application component

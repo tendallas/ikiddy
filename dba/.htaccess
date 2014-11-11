@@ -1,0 +1,7 @@
+AddDefaultCharset utf8
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !libs/ajax\.php
+RewriteCond %{REQUEST_FILENAME} !media
+RewriteCond %{REQUEST_FILENAME} !adminer\.php
+RewriteRule .* index.php [L]

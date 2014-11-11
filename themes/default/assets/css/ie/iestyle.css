@@ -1,0 +1,7 @@
+body {behavior: url(css/ie/display-table.min.htc); }
+#iepie {-dt-display: table; width:100%; height:45px; line-height:45px; text-align: center;}
+#iepie li {-dt-display: table-cell;}
+#menu {behavior: url(css/ie/PIE.htc);}
+#iepie .LI.home, #iepie .LI.home:hover {border-radius: 50px 0 0 50px; behavior: url(css/ie/PIE.htc);}
+#iepie .LI.last, #iepie .LI.last:hover {border-radius: 0 50px 50px 0; behavior: url(css/ie/PIE.htc);}
+.product-description .product-buy {border-radius: 10px;  behavior: url(css/ie/PIE.htc);}

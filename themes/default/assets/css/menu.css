@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+ul.dropdown {
+	list-style: none;
+	padding-left: 15px;
+}
+
+ul.dropdown li {
+	margin-bottom: 5px;
+	color: #e50c00;
+	font-size: 18px;
+	width: 220px;
+}
+
+ul.dropdown li a {
+	margin: 0 0 5px 0;
+	text-decoration: none;
+	color: #2D5F7E;
+	font-size: 13px;
+}
+
+ul.dropdown li a:hover {
+	text-decoration:underline; 
+	color:#0b83a9;
+}
+
+ul.dropdown ul {
+	list-style: none;
+	margin: 0px 0px 0 15px;
+}
+
+ul.dropdown ul li a {
+	margin: 0 0 5px 0;
+	text-decoration: none;
+	color: #2D5F7E;
+	font-size: 13px;
+}
+
+ul.dropdown ul li a:hover {
+	text-decoration: underline;
+	color: #0b83a9;
+}
+
+ul.dropdown .last span {
+	display: none;
+}

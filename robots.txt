@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: *?*
+Disallow: */search/*
+Disallow: *cart*
+Disallow: *users/*
+Disallow: *products/compare*
+Disallow: *wishlist*
+
+Host: i-kiddy.com
